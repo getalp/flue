@@ -23,7 +23,6 @@ name: FLUE
 email: your-email@example.com
 description: >- # this means to ignore newlines until "ba seurl:"
   French Language Understanding Evaluation
-  The goal is to enable further reproducible experiments in the future and to share models and progress on the French language.
 baseurl: /flue_page
 url: https://github.com/jkang1640
 twitter_username: jekyll
