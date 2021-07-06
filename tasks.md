@@ -5,8 +5,8 @@ permalink: /tasks/
 ---
   
 ## 1. Text Classification
-      
-    **CLS** The Cross Lingual Sentiment CLS (Prettenhofer
+
+**CLS** The Cross Lingual Sentiment CLS (Prettenhofer
    and Stein, 2010) dataset consists of Amazon reviews for
    three product categories: books, DVD, and music in four
    languages: English, French, German, and Japanese. Each
@@ -58,9 +58,9 @@ permalink: /tasks/
 
 ## 4. Parsing 
    
-   ### 4.1 Constituency Parsing 
-   
-   Syntactic parsing consists in assigning a tree structure to a
+### 4.1 Constituency Parsing
+
+Syntactic parsing consists in assigning a tree structure to a
    sentence in natural language. We perform parsing on the
    **French Treebank** (Abeille et al., 2003), a collection of sen- ´
    tences extracted from French daily newspaper Le Monde,
@@ -72,9 +72,9 @@ permalink: /tasks/
    1 235 and 2 541 sentences for the development and evaluation sets. 
    
 
-   ### 4.2 Dependency Parsing 
+### 4.2 Dependency Parsing
 
-   Dependency parsing consists in extracting a dependency parse of a sentence, which defines the relationships between words based on their dependencies. The same French Treebank corpus as in the 4.1 is used for the dependency parsing task, but this time, with annotated dependency syntactic trees. 
+Dependency parsing consists in extracting a dependency parse of a sentence, which defines the relationships between words based on their dependencies. The same French Treebank corpus as in the 4.1 is used for the dependency parsing task, but this time, with annotated dependency syntactic trees. 
 
 
 ## 5. Word Sense Disambiguation
@@ -82,14 +82,14 @@ permalink: /tasks/
    Word Sense Disambiguation (WSD) is a classification task which aims to predict the sense of words in a given context according to a specific sense inventory. We used two French WSD tasks: the **FrenchSemEval** task (Segonne et al., 2019), which targets verbs only, and a modified version of the French part of the Multilingual WSD task of SemEval 2013 (Navigli et al., 2013), which targets nouns. 
    
 
-   ### 5.1 Verb Sense Disambiguation 
+### 5.1 Verb Sense Disambiguation
 
-   We made experiments of sense disambiguation focused on French verbs using FrenchSemEval (Segonne et al., 2019, FSE), an evaluation dataset in which verb occurrences were manually sense an- notated with the sense inventory of Wiktionary, a collabora- tively edited open-source dictionary. FSE includes both the evaluation data and the sense inventory. The evaluation data consists of 3 199 manual annotations among a selection of 66 verbs which makes roughly 50 sense annotated occur- rences per verb. The sense inventory provided in FSE is a Wiktionary dump (04-20-2018) openly available via Db- nary (Se ́rasset, 2012). For a given sense of a target key, the sense inventory offers a definition along with one or more examples. For this task, we considered the examples of the sense inventory as training examples and tested our model on the evaluation dataset. 
+We made experiments of sense disambiguation focused on French verbs using FrenchSemEval (Segonne et al., 2019, FSE), an evaluation dataset in which verb occurrences were manually sense an- notated with the sense inventory of Wiktionary, a collabora- tively edited open-source dictionary. FSE includes both the evaluation data and the sense inventory. The evaluation data consists of 3 199 manual annotations among a selection of 66 verbs which makes roughly 50 sense annotated occur- rences per verb. The sense inventory provided in FSE is a Wiktionary dump (04-20-2018) openly available via Db- nary (Se ́rasset, 2012). For a given sense of a target key, the sense inventory offers a definition along with one or more examples. For this task, we considered the examples of the sense inventory as training examples and tested our model on the evaluation dataset. 
    
 
-   ### 5.2 Noun Sense Disambiguation 
+### 5.2 Noun Sense Disambiguation
 
-   We propose a new chal- lenging task for the WSD of French, based on the French part of the Multilingual WSD task of Se- mEval 2013 (Navigli et al., 2013), which targets nouns only. We adapted the task to use the WordNet 3.0 sense inventory (Miller, 1995) instead of BabelNet (Navigli and Ponzetto, 2010), by converting the sense keys to WordNet 3.0 if a mapping exists in BabelNet, and re- moving them otherwise.
+We propose a new chal- lenging task for the WSD of French, based on the French part of the Multilingual WSD task of Se- mEval 2013 (Navigli et al., 2013), which targets nouns only. We adapted the task to use the WordNet 3.0 sense inventory (Miller, 1995) instead of BabelNet (Navigli and Ponzetto, 2010), by converting the sense keys to WordNet 3.0 if a mapping exists in BabelNet, and re- moving them otherwise.
 The result of the conversion process is an evaluation corpus composed of 306 sentences and 1 445 French nouns anno- tated with WordNet sense keys, and manually verified.
 For the training data, we followed the method pro- posed by Hadj Salah (2018), and translated the SemCor (Miller et al., 1993) and the WordNet Gloss Corpus16 into French, using the best English-French Machine Translation system of the fairseq toolkit17 (Ott et al., 2019). Finally, we aligned the WordNet sense annotation from the source En- glish words to the the translated French words, using the alignment provided by the MT system.
 We rely on WordNet sense keys instead of the original Ba- belNet annotations for the following two reasons. First, WordNet is a resource that is entirely manually verified, and widely used in WSD research (Navigli, 2009). Sec- ond, there is already a large quantity of sense annotated data based on the sense inventory of WordNet (Vial et al., 2018) that we can use for the training of our system.
