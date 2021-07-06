@@ -12,3 +12,17 @@ permalink: /leaderboard/
 | FlauBERT-base  | 93.22 | 89.49  | 80.6 | 89.05 | 91.56 | 43.92 | 51.24 |
 | FlauBERT-large | 94.98 | 89.34  | 83.4 | 88.63 | 91.61 | 50.48 | 53.53 
 
+
+CLS : Text classification task with CLS dataset - Accuracy 
+
+PAWS-X : Paraphrasing task with PAWS-X dataset - Accuracy 
+
+XNLI : Natural language inference task with XNLI dataset - Accuracy 
+
+POS : Pos tagging task with French Treebank dataset - Accuracy 
+
+DP : Dependency parsing task with French Treebank dataset - UAS 
+
+VSD : Verb sense disambiguation task with French SemEval dataset - F1 
+
+NSD : Verb sense disambiguation task with French SemEval dataset - F1 
