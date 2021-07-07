@@ -25,4 +25,4 @@ permalink: /leaderboard/
 >
 ><sub> **VSD** : Verb sense disambiguation task with French SemEval dataset - F1 
 >
-><sub> **NSD** : Verb sense disambiguation task with French SemEval dataset - F1 
+><sub> **NSD** : Noun sense disambiguation task with French SemEval dataset - F1 
