@@ -53,7 +53,7 @@ permalink: /tasks/
    corpus to form the development and test sets for the NLI
    task in FLUE. The train set is obtained from the machine
    translated version to French provided in XNLI. Following
-   Conneau et al. (2018), we report the test accuracy
+   Conneau et al. (2018), we report the test accuracy. 
 
 
 ## 4. Parsing 
