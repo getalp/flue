@@ -23,7 +23,7 @@ name: FLUE
 email: your-email@example.com
 description: >- # this means to ignore newlines until "ba seurl:"
   French Language Understanding Evaluation
-baseurl: /blog
+baseurl: /flue_page
 url: https://github.com/getalp
 twitter_username: jekyll
 github_username:  jekyll
