@@ -62,8 +62,7 @@ permalink: /tasks/
 
 Syntactic parsing consists in assigning a tree structure to a
    sentence in natural language. We perform parsing on the
-   **French Treebank** (Abeille et al., 2003), a collection of sen- ´
-   tences extracted from French daily newspaper Le Monde,
+   **French Treebank** (Abeille et al., 2003), a collection of sentences extracted from French daily newspaper Le Monde,
    and manually annotated with both constituency and dependency syntactic trees and part-of-speech tags. Specifically,
    we use the version of the corpus instantiated for the SPMRL
    2013 shared task and described by Seddah et al. (2013).
@@ -84,13 +83,13 @@ Dependency parsing consists in extracting a dependency parse of a sentence, whic
 
 ### 5.1 Verb Sense Disambiguation
 
-We made experiments of sense disambiguation focused on French verbs using FrenchSemEval (Segonne et al., 2019, FSE), an evaluation dataset in which verb occurrences were manually sense an- notated with the sense inventory of Wiktionary, a collabora- tively edited open-source dictionary. FSE includes both the evaluation data and the sense inventory. The evaluation data consists of 3 199 manual annotations among a selection of 66 verbs which makes roughly 50 sense annotated occur- rences per verb. The sense inventory provided in FSE is a Wiktionary dump (04-20-2018) openly available via Db- nary (Se ́rasset, 2012). For a given sense of a target key, the sense inventory offers a definition along with one or more examples. For this task, we considered the examples of the sense inventory as training examples and tested our model on the evaluation dataset. 
+We made experiments of sense disambiguation focused on French verbs using FrenchSemEval (Segonne et al., 2019, FSE), an evaluation dataset in which verb occurrences were manually sense annotated with the sense inventory of Wiktionary, a collaboratively edited open-source dictionary. FSE includes both the evaluation data and the sense inventory. The evaluation data consists of 3 199 manual annotations among a selection of 66 verbs which makes roughly 50 sense annotated occurrences per verb. The sense inventory provided in FSE is a Wiktionary dump (04-20-2018) openly available via Dbnary (Se ́rasset, 2012). For a given sense of a target key, the sense inventory offers a definition along with one or more examples. For this task, we considered the examples of the sense inventory as training examples and tested our model on the evaluation dataset. 
    
 
 ### 5.2 Noun Sense Disambiguation
 
-We propose a new chal- lenging task for the WSD of French, based on the French part of the Multilingual WSD task of Se- mEval 2013 (Navigli et al., 2013), which targets nouns only. We adapted the task to use the WordNet 3.0 sense inventory (Miller, 1995) instead of BabelNet (Navigli and Ponzetto, 2010), by converting the sense keys to WordNet 3.0 if a mapping exists in BabelNet, and re- moving them otherwise.
-The result of the conversion process is an evaluation corpus composed of 306 sentences and 1 445 French nouns anno- tated with WordNet sense keys, and manually verified.
-For the training data, we followed the method pro- posed by Hadj Salah (2018), and translated the SemCor (Miller et al., 1993) and the WordNet Gloss Corpus16 into French, using the best English-French Machine Translation system of the fairseq toolkit17 (Ott et al., 2019). Finally, we aligned the WordNet sense annotation from the source En- glish words to the the translated French words, using the alignment provided by the MT system.
-We rely on WordNet sense keys instead of the original Ba- belNet annotations for the following two reasons. First, WordNet is a resource that is entirely manually verified, and widely used in WSD research (Navigli, 2009). Sec- ond, there is already a large quantity of sense annotated data based on the sense inventory of WordNet (Vial et al., 2018) that we can use for the training of our system.
-We publicly release18 both our training data and the evalu- ation data in the UFSAC format (Vial et al., 2018). 
+We propose a new challenging task for the WSD of French, based on the French part of the Multilingual WSD task of SemEval 2013 (Navigli et al., 2013), which targets nouns only. We adapted the task to use the WordNet 3.0 sense inventory (Miller, 1995) instead of BabelNet (Navigli and Ponzetto, 2010), by converting the sense keys to WordNet 3.0 if a mapping exists in BabelNet, and removing them otherwise.
+The result of the conversion process is an evaluation corpus composed of 306 sentences and 1 445 French nouns annotated with WordNet sense keys, and manually verified.
+For the training data, we followed the method proposed by Hadj Salah (2018), and translated the SemCor (Miller et al., 1993) and the WordNet Gloss Corpus16 into French, using the best English-French Machine Translation system of the fairseq toolkit17 (Ott et al., 2019). Finally, we aligned the WordNet sense annotation from the source English words to the translated French words, using the alignment provided by the MT system.
+We rely on WordNet sense keys instead of the original BabelNet annotations for the following two reasons. First, WordNet is a resource that is entirely manually verified, and widely used in WSD research (Navigli, 2009). Second, there is already a large quantity of sense annotated data based on the sense inventory of WordNet (Vial et al., 2018) that we can use for the training of our system.
+We publicly release18 both our training data and the evaluation data in the UFSAC format (Vial et al., 2018). 
